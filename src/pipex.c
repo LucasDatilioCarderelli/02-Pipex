@@ -6,17 +6,11 @@
 /*   By: ldatilio <ldatilio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 19:56:29 by ldatilio          #+#    #+#             */
-/*   Updated: 2022/02/05 19:45:09 by ldatilio         ###   ########.fr       */
+/*   Updated: 2022/02/10 15:05:10 by ldatilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./pipex.h"
-
-void	error(int e)
-{
-	perror("\033[31mError\e[0m");
-	exit(e);
-}
 
 void	parent_process(t_data *data)
 {
@@ -25,9 +19,11 @@ void	parent_process(t_data *data)
 
 	cmd = get_cmd(data->argv[3]);
 	cmd_path = get_cmd_path(cmd[0]);
-	dup2(data->fd[0], STDIN_FILENO);
-	dup2(data->fdout, STDOUT_FILENO);
 	close(data->fd[1]);
+	dup2(data->fd[0], STDIN_FILENO);
+	close(data->fd[0]);
+	dup2(data->fdout, STDOUT_FILENO);
+	close(data->fdout);
 	execve(cmd_path, cmd, data->envp);
 }
 
@@ -38,9 +34,11 @@ void	child_process(t_data *data)
 
 	cmd = get_cmd(data->argv[2]);
 	cmd_path = get_cmd_path(cmd[0]);
-	dup2(data->fdin, STDIN_FILENO);
-	dup2(data->fd[1], STDOUT_FILENO);
 	close(data->fd[0]);
+	dup2(data->fdin, STDIN_FILENO);
+	close(data->fdin);
+	dup2(data->fd[1], STDOUT_FILENO);
+	close(data->fd[1]);
 	execve(cmd_path, cmd, data->envp);
 }
 
@@ -68,10 +66,10 @@ int	main(int argc, char **argv, char **envp)
 
 	if (argc != 5)
 	{
-		write(2, "Error: Invalid Args\n", 21);
+		write(2, "Error: Invalid argument\n", 25);
 		exit(EINVAL);
 	}
-	data.fdin = open(argv[1], O_RDONLY);
+	data.fdin = open(argv[1], O_RDONLY, 0644);
 	data.fdout = open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if (data.fdin == -1 || data.fdout == -1)
 		error(errno);
