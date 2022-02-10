@@ -6,7 +6,7 @@
 /*   By: ldatilio <ldatilio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 08:58:01 by ldatilio          #+#    #+#             */
-/*   Updated: 2022/02/05 19:32:47 by ldatilio         ###   ########.fr       */
+/*   Updated: 2022/02/10 11:14:07 by ldatilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,11 @@ typedef struct s_data
 	int		argc;
 	char	**argv;
 	char	**envp;
+	int		wstatus;
 }	t_data;
 
+void	error(int e);
+void	error_cmd_not_found(char *cmd);
 int		free_matrix(char **matrix);
 char	*get_cmd_path(char *cmd);
 char	**get_cmd(char *argv);

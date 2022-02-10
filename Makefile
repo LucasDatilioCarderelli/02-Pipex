@@ -6,21 +6,22 @@
 #    By: ldatilio <ldatilio@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/31 20:14:36 by ldatilio          #+#    #+#              #
-#    Updated: 2022/02/04 22:15:38 by ldatilio         ###   ########.fr        #
+#    Updated: 2022/02/10 15:05:57 by ldatilio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	pipex
 
-CC		=	gcc
+CC		=	gcc -g
 
-CFLAGS	=	-Wall -Werror -Wextra #-fsanitize=leak
+CFLAGS	=	-Wall -Werror -Wextra -fsanitize=leak
 
 DIR		=	./src/
 DIR2	=	./utils/
 
 SRC 	=	$(addprefix $(DIR), \
-				args_parser.c 	\
+				cmd_parser.c 	\
+				errors.c 		\
 				pipex.c 		\
 			)
 
