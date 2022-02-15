@@ -6,7 +6,7 @@
 #    By: ldatilio <ldatilio@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/31 20:14:36 by ldatilio          #+#    #+#              #
-#    Updated: 2022/02/13 21:14:59 by ldatilio         ###   ########.fr        #
+#    Updated: 2022/02/14 20:20:31 by ldatilio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,5 +68,7 @@ fclean:			clean
 				rm -f $(NAME) $(NAME_BONUS)
 
 re:				fclean all
+
+rebonus:		fclean bonus
 
 .PHONY: 		all, clean, fclean, re, bonus, rebonus
