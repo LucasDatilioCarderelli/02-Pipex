@@ -6,7 +6,7 @@
 /*   By: ldatilio <ldatilio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 09:01:24 by ldatilio          #+#    #+#             */
-/*   Updated: 2022/02/10 14:44:11 by ldatilio         ###   ########.fr       */
+/*   Updated: 2022/02/15 02:19:46 by ldatilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,11 @@ char	**get_cmd(char *arg)
 	i = 0;
 	while (arg[i])
 	{
-		if (arg[i] == '\'' || arg[i] == '"')
+		if (arg[i] == '\'' || arg[i] == '\"')
 		{
-			arg[i] = 1;
-			while ((arg[i + 1] != '\'' || arg[i + 1] != '"') && arg[i + 1])
+			i++;
+			while (arg[i] != '\'' && arg[i] != '\"' && arg[i] != '\0')
 				i++;
-			arg[i] = 1;
 		}
 		else if (arg[i] == ' ')
 			arg[i] = 1;
