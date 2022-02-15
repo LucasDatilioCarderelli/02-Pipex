@@ -6,7 +6,7 @@
 /*   By: ldatilio <ldatilio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 19:56:29 by ldatilio          #+#    #+#             */
-/*   Updated: 2022/02/13 22:53:42 by ldatilio         ###   ########.fr       */
+/*   Updated: 2022/02/14 14:00:03 by ldatilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,10 @@ void	pipex(t_data *data)
 	while (++i < data->qnt_cmds)
 	{
 		if (i > 0)
+		{
 			dup2(data->fd[0], STDIN_FILENO);
-		close(data->fd[0]);
+			close(data->fd[0]);
+		}
 		if (pipe(data->fd) == -1)
 			error(errno);
 		data->pid = fork();

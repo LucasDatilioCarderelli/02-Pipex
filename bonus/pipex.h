@@ -6,7 +6,7 @@
 /*   By: ldatilio <ldatilio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 08:58:01 by ldatilio          #+#    #+#             */
-/*   Updated: 2022/02/13 17:21:42 by ldatilio         ###   ########.fr       */
+/*   Updated: 2022/02/14 13:09:14 by ldatilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ typedef struct s_data
 	int		argc;
 	char	**argv;
 	char	**envp;
-	int		wstatus;
 	int		qnt_cmds;
 }	t_data;
 
