@@ -6,7 +6,7 @@
 /*   By: ldatilio <ldatilio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 09:01:24 by ldatilio          #+#    #+#             */
-/*   Updated: 2022/02/15 02:19:18 by ldatilio         ###   ########.fr       */
+/*   Updated: 2022/02/17 19:17:52 by ldatilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*get_cmd_path(char *cmd)
 	while (path[i])
 	{
 		temp = ft_strjoin(path[i], cmd);
-		if (access(temp, F_OK) == 0)
+		if (access(temp, X_OK) == 0)
 		{
 			free_matrix(path);
 			return (temp);
