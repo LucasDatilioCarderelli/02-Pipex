@@ -6,11 +6,11 @@
 /*   By: ldatilio <ldatilio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 20:49:26 by ldatilio          #+#    #+#             */
-/*   Updated: 2021/09/16 11:11:47 by ldatilio         ###   ########.fr       */
+/*   Updated: 2022/02/17 19:57:40 by ldatilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "utils.h"
 
 char	*ft_strdup(const char *s)
 {

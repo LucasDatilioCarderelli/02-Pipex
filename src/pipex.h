@@ -6,7 +6,7 @@
 /*   By: ldatilio <ldatilio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 08:58:01 by ldatilio          #+#    #+#             */
-/*   Updated: 2022/02/14 12:08:15 by ldatilio         ###   ########.fr       */
+/*   Updated: 2022/02/17 19:56:21 by ldatilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <stdlib.h>
 # include <sys/wait.h>
 # include <unistd.h>
-# include "../utils/libft.h"
+# include "../utils/utils.h"
 
 # define PATH "/usr/local/sbin/:/usr/local/bin/:\
 /usr/sbin/:/usr/bin/:/sbin/:/bin/"

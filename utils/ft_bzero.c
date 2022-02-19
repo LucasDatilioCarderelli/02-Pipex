@@ -6,11 +6,11 @@
 /*   By: ldatilio <ldatilio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 12:51:37 by ldatilio          #+#    #+#             */
-/*   Updated: 2021/09/04 13:03:04 by ldatilio         ###   ########.fr       */
+/*   Updated: 2022/02/17 19:57:20 by ldatilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "utils.h"
 
 void	ft_bzero(void *s, size_t n)
 {

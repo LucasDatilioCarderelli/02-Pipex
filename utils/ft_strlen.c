@@ -6,11 +6,11 @@
 /*   By: ldatilio <ldatilio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 16:53:03 by ldatilio          #+#    #+#             */
-/*   Updated: 2021/09/02 22:12:06 by ldatilio         ###   ########.fr       */
+/*   Updated: 2022/02/17 19:57:52 by ldatilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "utils.h"
 
 size_t	ft_strlen(const char *str)
 {

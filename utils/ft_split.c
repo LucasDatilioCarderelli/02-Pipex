@@ -6,11 +6,11 @@
 /*   By: ldatilio <ldatilio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 18:35:12 by ldatilio          #+#    #+#             */
-/*   Updated: 2021/09/16 14:42:17 by ldatilio         ###   ########.fr       */
+/*   Updated: 2022/02/17 19:57:36 by ldatilio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "utils.h"
 
 static size_t	strcounter(char const *s, char c)
 {
