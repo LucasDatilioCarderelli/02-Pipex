@@ -23,7 +23,7 @@
 </p>
 
 <div align="center">
-	<a href="https://github.com/LucasDatilioCarderelli/01-So_long">
+	<a href="https://github.com/LucasDatilioCarderelli/02-Pipex">
 		<img src="https://github.com/LucasDatilioCarderelli/42Cursus/blob/master/img/pipex.png">
 	</a>
 </div>
